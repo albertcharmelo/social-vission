@@ -8,6 +8,7 @@ const links = [
   { href: "/", label: "Inicio", icon: "home" },
   { href: "/marketplace", label: "Marketplace", icon: "storefront" },
   { href: "/causas", label: "Causas", icon: "volunteer_activism" },
+  { href: "/nosotros", label: "Nosotros", icon: "group" },
 ];
 
 export function Navbar() {

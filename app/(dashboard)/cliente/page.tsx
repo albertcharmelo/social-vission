@@ -185,7 +185,7 @@ export default function ClienteOverview() {
 
       {/* Impact summary */}
       <Animate animation="fadeUp" delay={400}>
-        <DashboardCard className="bg-gradient-to-br from-white to-sprout/5">
+        <DashboardCard className="bg-gradient-to-br from-cloud to-sprout/5">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <div className="w-12 h-12 rounded-xl bg-sprout/20 flex items-center justify-center flex-shrink-0">
               <Leaf className="w-6 h-6 text-meadow" />

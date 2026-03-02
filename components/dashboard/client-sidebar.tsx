@@ -39,17 +39,17 @@ export function ClientSidebar() {
     <nav className="flex flex-col h-full">
       {/* Logo */}
       <div className="px-5 py-6 flex items-center gap-2.5">
-        <div className="w-8 h-8 rounded-full bg-sky flex items-center justify-center">
+        <div className="w-8 h-8 rounded-full bg-sky/80 flex items-center justify-center">
           <Heart className="w-4 h-4 text-white" />
         </div>
-        <span className="text-[#e8f4fb] font-bold text-lg tracking-tight">
+        <span className="text-cloud font-bold text-lg tracking-tight">
           Social Vission
         </span>
       </div>
 
       {/* Role badge */}
       <div className="px-5 mb-4">
-        <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider bg-sky/15 text-[#b8d4e3] px-2.5 py-1 rounded-full">
+        <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider bg-sky/20 text-calm px-2.5 py-1 rounded-full">
           <ShoppingBag className="w-3 h-3" />
           Cliente
         </span>
@@ -68,8 +68,8 @@ export function ClientSidebar() {
                 flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium
                 transition-colors
                 ${active
-                  ? "bg-sky/15 text-[#b8d4e3]"
-                  : "text-[#7a9aaa] hover:text-[#b8d4e3] hover:bg-white/5"
+                  ? "bg-sky/20 text-sky"
+                  : "text-cloud/50 hover:text-cloud hover:bg-white/5"
                 }
               `}
             >
@@ -88,14 +88,14 @@ export function ClientSidebar() {
       {/* User */}
       <div className="px-4 py-4 border-t border-white/10">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-sky/20 flex items-center justify-center text-[#b8d4e3] text-xs font-semibold">
+          <div className="w-8 h-8 rounded-full bg-sky/20 flex items-center justify-center text-calm text-xs font-semibold">
             JP
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-[#e8f4fb] text-sm font-medium truncate">Juan Perez</p>
-            <p className="text-[#7a9aaa] text-xs truncate">juan@empresa.com</p>
+            <p className="text-cloud text-sm font-medium truncate">Juan Perez</p>
+            <p className="text-cloud/40 text-xs truncate">juan@empresa.com</p>
           </div>
-          <button className="text-[#7a9aaa] hover:text-[#b8d4e3] transition-colors cursor-pointer">
+          <button className="text-cloud/40 hover:text-cloud transition-colors cursor-pointer">
             <LogOut className="w-4 h-4" />
           </button>
         </div>
@@ -106,7 +106,7 @@ export function ClientSidebar() {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex lg:w-[260px] lg:flex-shrink-0 h-screen sticky top-0" style={{ backgroundColor: "#1a2c3a" }}>
+      <aside className="hidden lg:flex lg:w-[260px] lg:flex-shrink-0 bg-deep h-screen sticky top-0">
         {nav}
       </aside>
 
@@ -121,15 +121,14 @@ export function ClientSidebar() {
       {/* Mobile drawer */}
       <aside
         className={`
-          fixed top-0 left-0 h-full w-[280px] z-50 lg:hidden
+          fixed top-0 left-0 h-full w-[280px] bg-deep z-50 lg:hidden
           transition-transform duration-300 ease-out
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
-        style={{ backgroundColor: "#1a2c3a" }}
       >
         <button
           onClick={() => setSidebarOpen(false)}
-          className="absolute top-4 right-4 text-[#7a9aaa] hover:text-[#b8d4e3] cursor-pointer"
+          className="absolute top-4 right-4 text-cloud/40 hover:text-cloud cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
